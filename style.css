@@ -1,0 +1,217 @@
+/*font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Roboto Mono', monospace;
+
+  --bg-primary: #000;
+  --bg-button:#065E7C;
+  --bg-table-header:#092D38;
+  --bg-table-body-primary:rgba(6, 22, 27, 0.5);
+  --bg-input:#06181C;
+
+  --text-color: #E1E1E6;
+  --text-color-primary-button: #fff;
+  --text-color-secondary-button:#065E7C;
+  --text-color-placeholder:#7C7C8A;
+
+  --text-color-action:#F75A68;
+}
+
+body{
+  font-size: 1.6rem;
+
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  font-family: var(--ff-primary);
+
+}
+
+.app{
+  max-width: 1120px;
+  padding: 11.5rem 16rem;
+  }
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8.7rem;
+  
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden; /*vai ficar dentro do 1px estabelecido*/
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0; /*largura da borda do elemento */
+}/*fazer o elemento ou texto sumir da tela sem ter um problema com o leitor de tela*/
+
+.search{
+  display: flex;
+  gap: 8px;
+  padding-left: 29.3rem;
+}
+
+.search input{
+  width: 46.2rem;
+
+  background-color: var(--bg-input);
+
+  border: none;
+  border-radius: 5px;
+
+  padding: 1.6rem;
+
+  color: #7C7C8A;
+
+  font-size: 1.6rem;
+}
+
+.search input::placeholder{
+  color: var(--text-color-placeholder);
+  font-size: 1.6rem;
+}
+
+.search button{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+
+  width: 17rem;
+
+  padding: 1.2rem 3.2rem;
+
+  color: var(--text-color-primary-button);
+
+  background-color: var(--bg-button);
+
+ 
+  font-size: 14px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.tabela {
+  width: 1120px;
+  height: 100%;
+  margin: 2rem auto;
+
+  outline: 1px solid #4A808C; /*Usar o outline
+  ao invés do border para ter a borda na tabela*/
+  border-radius: 1.2rem;
+  
+}
+
+table{
+  width: 1120px;
+  border-collapse: collapse;  
+
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table *{
+  font-family:'Roboto', sans-serif;
+  color: var(--text-color);  
+}
+
+table th{
+  background-color:var(--bg-table-header);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.6rem;
+  padding-left: 4.0rem;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+table th:first-child{
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child{
+  border-top-right-radius: 1.2rem;
+}
+
+table tr:nth-child(odd){
+  background: rgba(6, 22, 27, 0.5);
+} /*de primeira irá mudar as colunas, mas depois do display flex fica nas linhas, 
+de maneira correta*/
+table tr{
+  background: #06181C;
+}
+
+table td{
+  padding: 2.4rem;
+  padding-left: 4rem;
+
+  text-align: left;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+table td.user{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+td.user img{
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover; /*garante que ele va cobrir o espaço todo*/
+  border-radius: 50%; /*fez o arredondamento da imagem*/
+}
+
+td.user a{
+  text-decoration: none;
+}
+
+td.user a p{
+  font-weight: bold;
+}
+
+td.user span{
+  font-weight: 400;
+
+  color: #E1E1E6;
+}
+
+td button{
+  color: var(--text-color-action);
+  background-color: transparent;
+
+  border: none;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 160%;
+
+  cursor: pointer;
+}
+
