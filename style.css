@@ -111,22 +111,16 @@ header{
   cursor: pointer;
 }
 
-.tabela {
-  width: 1120px;
-  height: 100%;
-  margin: 2rem auto;
-
-  outline: 1px solid #4A808C; /*Usar o outline
-  ao invés do border para ter a borda na tabela*/
-  border-radius: 1.2rem;
-  
-}
-
 table{
   width: 1120px;
+  height: 100%;
   border-collapse: collapse;  
 
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  
+  outline: 1px solid #4A808C; /*Usar o outline
+  ao invés do border para ter a borda na tabela*/
+  border-radius: 1.2rem;
 }
 
 table *{
