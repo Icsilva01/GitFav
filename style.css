@@ -37,8 +37,15 @@ body{
 }
 
 .app{
-  max-width: 1120px;
+  width: 1120px;
   padding: 11.5rem 16rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  align-items: center;
+
   }
 
 header{
